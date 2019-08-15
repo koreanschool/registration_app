@@ -8,7 +8,6 @@ const password = "Office925"; //this is also super bad
 
 function writeToDatabase(parentInfo, student) {
     let registration = {...parentInfo, ...student};
-    console.log(registration);
     store.append("Database", [registration], 
     {
         authentication: { username: username, password: password }

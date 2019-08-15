@@ -3,7 +3,6 @@ import { Container, Form, Col, Button, ButtonGroup, Row } from 'react-bootstrap'
 
 const Student = (props) => {
     const {studentList, setStudents} = props;
-    console.log(props);
     const handleChange = (value, fieldName) => {
         // let tempStudents = studentList; // [{},{},...]
         // tempStudents = {...tempStudents, ...{[fieldName]: value}};

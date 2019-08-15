@@ -7,7 +7,6 @@ import Student from './Student';
 const Step2 = ({steps, studentList}) => {
     const {step, addCurrentStep, backCurrentStep} = steps;
     const {students, setStudents} = studentList;
-    console.log(students);
     const [validated, setValidated] = useValidation();
 
     // const handleAdd = () => {

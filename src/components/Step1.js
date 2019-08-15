@@ -9,7 +9,6 @@ const Step1 = ({steps, registrations}) => {
     const [validated, setValidated] = useValidation();
     const handleSubmit = event => {
         const form = event.currentTarget;
-        console.log(form.checkValidity());
         if (!form.checkValidity()) {
             setValidated(true);
             event.preventDefault();
@@ -22,7 +21,6 @@ const Step1 = ({steps, registrations}) => {
     const addToRegistration = (obj) => {
         let parentInfo = {...registration, ...obj};
         setRegistration(parentInfo);
-        console.log(registration);
     }
 
   return (

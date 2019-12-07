@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button, ButtonGroup, Container } from 'react-bootstrap';
-import writeToDatabase from './Stein';
+import Stein from './Stein';
 import useValidation from '../hooks/useValidation';
 
 const Finish = ({steps, registrations, studentList}) => {
@@ -18,7 +18,7 @@ const Finish = ({steps, registrations, studentList}) => {
       event.stopPropagation();
     } else {
       setValidated(false);
-      await writeToDatabase(registration, students);
+      await Stein.writeToDatabase(registration, students);
     }
   }; 
 

@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 import './App.css';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import Register from './pages/Register';
+import Reregister from './pages/Reregister';
 import Confirmation from './pages/Confirmation';
 import Home from './pages/Home';
 
@@ -24,6 +25,7 @@ const App = () => {
         <Home path="/"/>
         <Register path="/register" />
         <Confirmation path="confirmation"/>
+        <Reregister path="/reregister"/>
       </Router>
       <Container style={{marginTop: '50px'}}>
         <hr/>

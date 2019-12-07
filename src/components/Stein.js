@@ -21,4 +21,16 @@ function writeToDatabase(parentInfo, student) {
     });
 }
 
-export default writeToDatabase;
+function searchDatabase(email) {
+    store.read("Database",     {
+        authentication: { username: username, password: password }
+    },
+    { search: { email: email } })
+    .then(data => {
+        console.log(data);
+      }).catch(err => {
+        console.log(err);
+    });
+}
+
+export default {writeToDatabase, searchDatabase};

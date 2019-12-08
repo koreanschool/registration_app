@@ -8,6 +8,10 @@ const password = "Office925"; //this is also super bad
 
 function writeToDatabase(parentInfo, student) {
     let registration = {...parentInfo, ...student};
+    writeRegistration(registration);
+}
+
+function writeRegistration(registration) {
     store.append("Database", [registration], 
     {
         authentication: { username: username, password: password }
@@ -21,16 +25,22 @@ function writeToDatabase(parentInfo, student) {
     });
 }
 
-function searchDatabase(email) {
-    store.read("Database",     {
-        authentication: { username: username, password: password }
-    },
-    { search: { email: email } })
+async function searchDatabase(email) {
+    console.log("em: " + email);
+    return await store.read("Semester1",     {
+        authentication: { username: username, password: password },
+        search: { email: email }
+    })
     .then(data => {
-        console.log(data);
+        // console.log("Found " + data.length + " student(s): ");
+        // data.forEach(element => {
+        //     console.log(element.engName);
+        // });
+        // console.log(" Would you like to re-register them?");
+        return data;
       }).catch(err => {
         console.log(err);
     });
 }
 
-export default {writeToDatabase, searchDatabase};
+export default {writeToDatabase, searchDatabase, writeRegistration};

@@ -5,13 +5,21 @@ import Stein from '../components/Stein';
 import { Form, Container, Button, Col } from 'react-bootstrap';
 
 const Home = () => {
-    const {email, setEmail} = useSearch();
+    const {email, setEmail, results, setResults} = useSearch();
     const handleSubmit = async event => {
         event.preventDefault();
         console.log(email);
-        await Stein.searchDatabase(email);
+        const results = await Stein.searchDatabase(email);
+        console.log(results);
+        setResults(results);
     };
-
+  const handleRegister = async event => {
+    event.preventDefault();
+    results.forEach(async element => {
+      console.log(element);
+      await Stein.writeRegistration(element);
+    });
+  };
   return (
     <Container style={{marginTop:'50px'}}>
     <Form onSubmit={handleSubmit}>
@@ -19,7 +27,7 @@ const Home = () => {
           <h2>재등록 | Reregister </h2>
           <h4>{Constants.year}</h4>
           <p>1-2학기 재학생만 가능, 신입생은 새로 등록해주세요. <br/>
-          Only for returning students, for new students please use the other form.
+          Only for returning students, for new students please use the other <a href="/register">form</a>.
           </p>
           <Form.Label><strong>부모 이메일 주소 | Parent Email</strong></Form.Label>
           <Form.Row>
@@ -39,6 +47,20 @@ const Home = () => {
             </Col>
           </Form.Row>
         </Container>
+    </Form>
+    <Form onSubmit={handleRegister}>
+    <Container style={{marginTop:'10px'}}>
+      {results ? 
+      <div>Found {results.length} student(s): <br/>
+        {results.map(element => 
+        <b>{element.engName}<br/></b>)}
+        {results.length == 0 ? <p>Please register <a href="/register">here</a>.</p>: <Button variant="success" type="submit" style={{marginTop:'10px'}}>
+          Reregister all
+        </Button> }
+      </div>
+      : ''
+      }
+    </Container>
     </Form>
     </Container>
   )

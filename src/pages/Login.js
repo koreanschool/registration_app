@@ -12,7 +12,7 @@ const Login = () => {
             await firebase.auth().signInWithPopup(provider);
             navigate("/");
         } catch (error) {
-            setAuthError(error);
+            setAuthError(error.message);
         }
     };
 
@@ -22,7 +22,7 @@ const Login = () => {
             .signOut()
             .then(() => navigate("/"));
     };
-    
+
     if (user) { 
         return ( 
             <a href="/" onClick={ e => {
@@ -36,7 +36,8 @@ const Login = () => {
         <a href="/" onClick={ e => {
             e.preventDefault()
             handleLogin()
-        }}>Login as admin</a>
+        }}>Login as admin {authError && authError.message}</a>
+        // <p>{authError}</p>
     )
 }
 

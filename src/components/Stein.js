@@ -17,16 +17,16 @@ function writeRegistration(registration) {
         authentication: { username: username, password: password }
     })
     .then(res => {
-        console.log(res);
+        // console.log(res);
         {window.location.href='/confirmation'};
     }).catch(err => {
-        console.log(err);
+        // console.log(err);
         {window.location.href='/confirmation'};
     });
 }
 
 async function searchDatabase(email) {
-    console.log("em: " + email);
+    // console.log("em: " + email);
     return await store.read("Semester1",     {
         authentication: { username: username, password: password },
         search: { email: email }

@@ -6,7 +6,7 @@ import ClassPage from './ClassPage';
 const Class = () => {
   return (
     <Container style={{marginTop:'50px'}}>
-       <Tab.Container id="left-tabs" defaultActiveKey="유치가">
+       <Tab.Container id="left-tabs" defaultActiveKey="유치가 (금|토)">
         <Row>
           <Col sm={3}>
             <Nav variant="pills" className="flex-column">

@@ -8,15 +8,15 @@ const Home = () => {
     const {email, setEmail, results, setResults} = useSearch();
     const handleSubmit = async event => {
         event.preventDefault();
-        console.log(email);
+        // console.log(email);
         const results = await Stein.searchDatabase(email);
-        console.log(results);
+        // console.log(results);
         setResults(results);
     };
   const handleRegister = async event => {
     event.preventDefault();
     results.forEach(async element => {
-      console.log(element);
+      // console.log(element);
       await Stein.writeRegistration(element);
     });
   };

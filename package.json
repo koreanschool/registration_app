@@ -5,11 +5,15 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "bootstrap": "^4.3.1",
+    "draft-js": "^0.11.4",
+    "draftjs-to-html": "^0.9.1",
+    "firebase": "^7.12.0",
     "hookrouter": "^1.2.3",
     "netlify-cli": "^2.12.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
+    "react-draft-wysiwyg": "^1.14.4",
     "react-scripts": "3.0.1",
     "stein-js-client": "0.0.2"
   },

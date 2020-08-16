@@ -5,24 +5,35 @@ const Confirmation = () => {
   return (
     <Container style={{marginTop:'50px'}}>
         <h1>Confirmed</h1>
-        <p> 2 학기는 <strong>1/7/2020(금) 1/8/2020(토)</strong> 시작합니다.
-        <br/> 2nd Semester starts 1/7/2020(Friday) 1/8/2020(Saturday).</p>
 
-        <p>등록 해주셔서 감사합니다. 아래 주소로 우편을 이용하시거나 교무실로 직접가져오셔도 됩니다.
-        </p>
+        <p>등록 해주셔서 감사합니다. <br/>
+        <strong>개학 일: 9월 11일 금요일 </strong><br/>
+        <br/>*** 토요반은 온라인 수업 동안 금요반과 함께 할 예정입니다.
+        <br/>등록금: $180<br/>
 
-        <p>Thank you for your registration.
-          You may bring your check to the first day of class at the school office or send your check through the mail. <br/>
-        <br/>Pay to the order of: 
-        <br/>St. Andrew Kim Korean School 
-        <br/>Address: 11700 1st Ave. NE, 
-        <br/>Seattle WA 98125
+        <br/>수표 이름:  Korean Catholic School of Seattle
+        <br/>보내실 곳:  Yun Kang Debond
+        <br/>                <strong>23122 86th PL W, Edmonds, WA 98026</strong>
+        <br/>
+        <br/>수표는 학교책 픽업 하실때 가져 오셔도 됩니다.
+        <br/>한국 학교에 관한  질문이나 의문 사항이 있으시면  김송아 교감 선생님 (425-773-8597)께 연락 주시기 바랍니다.<br/>
+
+        <br/>Covid-19으로 모두가 힘겨운 나날을 보내는 요즘, 가족들과 함께 건강하게 안전하게 잘 지내시기 바랍니다.
+        <br/>감사합니다!!
+        <br/>
+        <br/>Korean school starts: <strong>September 11, Friday</strong><br/>
+        <br/>*** No Saturday class during the Covid-19, we'll have only Friday classes.
+        <br/>Tuition: $180
         <br/><strong>We do not accept cash.</strong></p>
+        You may also bring your check during our drive through pick-up of school books/syllabus.<br/>
+        Checks payable to: Korean Catholic School of Seattle
+        <br/>Send to:    Yun Kang Debond
+        <br/>                 23122 86th PL W., Edmonds, WA 98026
+        <br/>
+        <br/>If you have any questions Please call 425-773-8597 (Songah Kim- Korean school vice principal)
 
-          <br></br>
-          Please email us at sakks10@gmail.com or call us at 206.362.2278 for any questions.
-          <br></br>
-         <p> We look forward to seeing you!</p>
+        <br/>Stay healthy and Safe.
+        <br/>Thank You!
     </Container>
   )
 }

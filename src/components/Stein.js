@@ -1,10 +1,9 @@
 import SteinStore from 'stein-js-client';
+import Constants from '../constants';
 
 const store = new SteinStore(
     "https://api.steinhq.com/v1/storages/5d3fb20987c49c04cac13693"
 );
-const username = "admin"; //this is so bad
-const password = "Office925"; //this is also super bad
 
 function writeToDatabase(parentInfo, student) {
     let registration = {...parentInfo, ...student};
@@ -12,23 +11,23 @@ function writeToDatabase(parentInfo, student) {
 }
 
 function writeRegistration(registration) {
-    store.append("Database", [registration], 
+    store.append(Constants.dbYear, [registration], 
     {
-        authentication: { username: username, password: password }
+        authentication: { username: Constants.username, password: Constants.auth }
     })
     .then(res => {
-        // console.log(res);
         {window.location.href='/confirmation'};
     }).catch(err => {
-        // console.log(err);
-        {window.location.href='/confirmation'};
+        console.log(err);
+        {window.location.href='/about'};
     });
 }
 
 async function searchDatabase(email) {
     // console.log("em: " + email);
-    return await store.read("Semester1",     {
-        authentication: { username: username, password: password },
+    return await store.read("Database",     
+    {
+        authentication: { username: Constants.username, password: Constants.auth },
         search: { email: email }
     })
     .then(data => {

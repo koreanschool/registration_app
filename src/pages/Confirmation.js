@@ -7,7 +7,7 @@ const Confirmation = () => {
         <h1>Confirmed</h1>
 
         <p>등록 해주셔서 감사합니다. <br/>
-        <strong>개학 일: 9월 11일 금요일 </strong><br/>
+        <strong>개학 일: 2월 5일 금요일 </strong><br/>
         <br/>*** 토요반은 온라인 수업 동안 금요반과 함께 할 예정입니다.
         <br/>등록금: $180<br/>
 
@@ -21,7 +21,7 @@ const Confirmation = () => {
         <br/>Covid-19으로 모두가 힘겨운 나날을 보내는 요즘, 가족들과 함께 건강하게 안전하게 잘 지내시기 바랍니다.
         <br/>감사합니다!!
         <br/>
-        <br/>Korean school starts: <strong>September 11, Friday</strong><br/>
+        <br/>Korean school starts: <strong>February 2nd, Friday</strong><br/>
         <br/>*** No Saturday class during the Covid-19, we'll have only Friday classes.
         <br/>Tuition: $180
         <br/><strong>We do not accept cash.</strong></p>

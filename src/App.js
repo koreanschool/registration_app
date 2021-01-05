@@ -21,7 +21,7 @@ const App = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
-            <Nav.Link href="/class">Class</Nav.Link>
+            {/* <Nav.Link href="/class">Class</Nav.Link> */}
             <Nav.Link href="/about">About</Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -32,7 +32,7 @@ const App = () => {
         <Confirmation path="confirmation"/>
         <Reregister path="/reregister"/>
         <About path="/about"/>
-        <Class path="/class"/>
+        {/* <Class path="/class"/> */}
         <ClassPage path="/class/*"/>
       </Router>
       <Container style={{marginTop: '50px'}}>

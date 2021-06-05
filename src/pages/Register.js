@@ -9,7 +9,7 @@ import { Container } from 'react-bootstrap';
 import Constants from '../constants';
 import useStudents from '../hooks/useStudents';
 
-const Register = () => {
+const Register = ({year}) => {
   const {step, addCurrentStep, backCurrentStep} = useSteps();
   const {registration, setRegistration} = useRegistration();
   const {students, setStudents} = useStudents();
@@ -17,7 +17,7 @@ const Register = () => {
   return (
     <Container style={{marginTop:'50px'}}>
       <h1>Registration</h1>
-      <h4>{Constants.year}</h4>
+      <h4><div dangerouslySetInnerHTML={{ __html: year }} /></h4>
       <br></br>
       <Container style={{backgroundColor: '#eee', borderRadius: '7px', padding: '20px'}}>
         {

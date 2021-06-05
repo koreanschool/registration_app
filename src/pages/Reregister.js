@@ -4,7 +4,7 @@ import useSearch from '../hooks/useSearch';
 import Stein from '../components/Stein';
 import { Form, Container, Button, Col } from 'react-bootstrap';
 
-const Home = () => {
+const Home = ({year}) => {
     const {email, setEmail, results, setResults} = useSearch();
     const handleSubmit = async event => {
         event.preventDefault();
@@ -25,7 +25,7 @@ const Home = () => {
     <Form onSubmit={handleSubmit}>
         <Container>
           <h2>재등록 | Reregister </h2>
-          <h4>{Constants.year}</h4>
+          <h4><div dangerouslySetInnerHTML={{ __html: year }} /></h4>
           <p>1-2학기 재학생만 가능, 신입생은 새로 등록해주세요. <br/>
           Only for returning students, for new students please use the other <a href="/register">form</a>.
           </p>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Router } from "@reach/router";
 import './App.css';
+import firebase from "firebase";
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import Register from './pages/Register';
 import Reregister from './pages/Reregister';
@@ -12,6 +13,19 @@ import ClassPage from './pages/ClassPage';
 import Login from './pages/Login';
 
 const App = () => {
+  const firebaseRef = firebase.database().ref(`Year`);
+  const [year, setYear] = useState("");
+  useEffect(() => {
+    firebaseRef.on("value", snap => {
+      if (snap.exists()) {
+        let obj = snap.val();
+        setYear(obj['content']);
+      } else {
+        console.log("No data available");
+      }
+    });
+  }, [firebaseRef, year]);
+
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -27,10 +41,10 @@ const App = () => {
         </Navbar.Collapse>
       </Navbar>
       <Router>
-        <Home path="/"/>
-        <Register path="/register" />
+        <Home path="/" year={year}/>
+        <Register path="/register" year={year}/>
         <Confirmation path="confirmation"/>
-        <Reregister path="/reregister"/>
+        <Reregister path="/reregister" year={year}/>
         <About path="/about"/>
         {/* <Class path="/class"/> */}
         <ClassPage path="/class/*"/>

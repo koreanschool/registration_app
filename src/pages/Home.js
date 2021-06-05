@@ -1,9 +1,10 @@
 import React from 'react';
+import firebase from 'firebase';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import Constants from '../constants';
 
-const Home = () => {
+const Home = ({year}) => {
   return (
     <div>
         <br/>
@@ -18,7 +19,7 @@ const Home = () => {
         <div className="container text-white">
             <h1>St. Andrew Kim Korean School</h1>
             <h2>성 김대건 한국 학교</h2><br></br>
-            <p>{Constants.year}</p>
+            <div dangerouslySetInnerHTML={{ __html: year }} />
             <p><strong>Now accepting registrations</strong></p> 
             <p>
             <Button variant="success" href="/register">등록 | Register</Button>

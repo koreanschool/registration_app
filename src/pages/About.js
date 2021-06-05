@@ -7,13 +7,18 @@ import Write from '../components/Write';
 
 const About = () => {
   const [user, loading] = useAuth();
-  const firebaseRef = firebase
+  const aboutRef = firebase
             .database()
             .ref(`About`);
+  const yearRef = firebase
+            .database()
+            .ref(`Year`);
   return (
     <Container style={{marginTop:'50px'}}>
       <Col><h2>About</h2></Col>
-        <Write pageName="About" firebaseRef={firebaseRef}></Write>
+        <Write pageName="About" firebaseRef={yearRef}></Write>
+        <br/>
+        <Write pageName="About" firebaseRef={aboutRef}></Write>
     </Container>
   )
 }

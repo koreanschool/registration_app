@@ -30,7 +30,6 @@ const Confirmation = () => {
         <br/>Send to:    Yun Kang Debond
         <br/>                 23122 86th PL W., Edmonds, WA 98026
         <br/>
-        <br/>If you have any questions Please call 425-773-8597 (Songah Kim- Korean school vice principal)
 
         <br/>Stay healthy and Safe.
         <br/>Thank You!

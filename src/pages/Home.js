@@ -8,7 +8,6 @@ const Home = ({year}) => {
   return (
     <div>
         <br/>
-        <Alert variant='warning'>&#9432; The school is operating online due to COVID-19.</Alert>
         {/* <Alert variant='success'>You can access online classes by clicking 
         <a href="/class"> here</a> and selecting your child's class. <br/><br/>
         해당 자녀 <a href="/class">수업반</a>을 들어가시면 온라인 수업/숙제를 보실 수 있습니다. </Alert> */}

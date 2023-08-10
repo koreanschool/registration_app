@@ -5,8 +5,8 @@ const Confirmation = () => {
   return (
     <Container style={{marginTop:'50px'}}>
         <h1>Confirmed</h1>
-        <p> 2 학기는 <strong>1/7/2022(금) 1/8/2022(토)</strong> 시작합니다.
-        <br/> 2nd Semester starts 1/7/2022(Friday) 1/8/2022(Saturday).</p>
+        <p> 1 학기는 <strong>9/15/2023(금) 1/27/2024(토)</strong> 시작합니다.
+        <br/> 2nd Semester starts 2/3/2023(Friday) 2/4/2023(Saturday).</p>
 
         <p>등록 해주셔서 감사합니다. 아래 주소로 우편을 이용하시거나 교무실로 직접가져오셔도 됩니다.
         </p>

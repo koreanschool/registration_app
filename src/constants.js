@@ -1,3 +1,3 @@
 export default {
-    year: '2019-2020 2학기 | 2nd Semester',
+    year: '2023-2024 1학기 | 1st Semester',
 }

@@ -30,7 +30,7 @@ const App = () => {
       <Container style={{marginTop: '50px'}}>
         <hr/>
         <footer style={{color: 'gray'}}>
-          <p style={{fontSize:'13px'}}>© 2019 - St. Andrew Kim Korean School </p>
+          <p style={{fontSize:'13px'}}>© 2023 - St. Andrew Kim Korean School </p>
         </footer>
       </Container>
     </div>

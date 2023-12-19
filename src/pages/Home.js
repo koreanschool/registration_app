@@ -23,7 +23,6 @@ const Home = ({year}) => {
             <p>
             <Button variant="success" href="/register">등록 | Register</Button>
         </div>
-        </div>
     </div>
   )
 }

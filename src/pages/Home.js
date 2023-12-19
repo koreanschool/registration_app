@@ -22,9 +22,6 @@ const Home = ({year}) => {
             <p><strong>Now accepting registrations</strong></p> 
             <p>
             <Button variant="success" href="/register">등록 | Register</Button>
-            </p>
-            <p> OR </p>
-            <Button variant="primary" href="/reregister">재등록 | Reregister</Button>
         </div>
         </div>
     </div>

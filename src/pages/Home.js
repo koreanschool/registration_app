@@ -22,6 +22,8 @@ const Home = ({year}) => {
             <p><strong>Now accepting registrations</strong></p> 
             <p>
             <Button variant="success" href="/register">등록 | Register</Button>
+           </p>
+        </div>
         </div>
     </div>
   )
